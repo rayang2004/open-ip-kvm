@@ -175,5 +175,13 @@ new Vue({
         this.activeDialog = '';
       }
     },
+    reset_hid(dev) {
+      if (dev === "kb"){
+        kb.sendEvent(this.$channel, '', 'reset');
+      }
+      else {
+	mouse.sendEvent(this.$channel, '', 'reset');
+      }
+    }
   },
 });
