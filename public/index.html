@@ -35,12 +35,14 @@
         <div class="float-zone trans-bg">
           <!-- <div>Open IP-KVM</div> -->
           <span
+	    @click="reset_kb('ms')"
             class="indicator bi-mouse"
             style="font-size: 22px"
             :class="{active: isPointorLocked}"
             title="Mouse Indicator"
           ></span>
           <span
+	    @click="reset_kb('kb')"
             class="indicator bi-keyboard"
             style="font-size: 26px"
             :class="{active: isKeyCaptureActive}"
